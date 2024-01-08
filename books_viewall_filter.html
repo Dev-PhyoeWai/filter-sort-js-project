@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BooksViewallFilter ||</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- animate.css cdn link -->
+    <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<!--
+    @yield('style')
+    {{-- <link rel="stylesheet" href="{{ asset('assets/js/css/home_page.css') }}"> --}}
+-->
+
+</head>
+
+<body>
+    <div class="wrapper d-flex flex-column">
+        <!--div class="w-100 fixed-top mb-5" style="z-index: 1;"-->
+            <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+                <div class="container-fluid py-2 pt-2 navsection" style="background: #c3c0c0; border-radius: 3px;">
+                    <a class="navbar-brand ms-5" href="#">Book Shop</a>
+                    <div class="navbar-collapse collapse" id="navbarSupportedContent">
+                        <form class="d-flex w-50 mx-auto" role="search">
+                            <input class="form-control me-2" type="" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-secondary" type="submit">Search</button>
+                        </form>
+                    </div>
+
+                    <div class="nav-item mx-auto me-5">
+                        <!--<button type="button" class="btn btn-outline-secondary" href="/Login_in">-->
+                        <a href="{{ route('Login') }}"> <button type="submit" class="btn btn-outline-secondary">
+                                <i class="fas fa-user-circle me-1"></i> login here
+                            </button>
+                        </a>
+                    </div>
+                    <div class="nav-item mx-auto me-5">
+                        <a href="{{ route('cart') }}"><button type="button" class="btn btn-outline-secondary">
+                                <i class="fa-sharp fa-solid fa-cart-shopping fa-beat-fade"></i> My Cart</button>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+
+        <!---------------       --------------------->
+        <main>
+            <!--		first section start		-->
+            <section class="container py-3">
+                <header class="secnav">
+                    <ul class="indicator">
+                        <li data-filter="all" class="active"><a href="#">All</a></li>
+                        <li data-filter="Science"><a href="#">Science</a></li>
+                        <li data-filter="Romance"><a href="#">Romance</a></li>
+                        <li data-filter="History"><a href="#">History</a></li>
+                        <li data-filter="Technology"><a href="#">Technology</a></li>
+                        <!-- li data-filter="Accessories"><a href="#">Accessories</a></li -->
+                    </ul>
+                    <div class="filter-condition">
+                        <span>Sort By<br></span>
+                        <select name="" id="select">
+                            <option value="Default">Default</option>
+                            <option value="LowToHigh">Low to high</option>
+                            <option value="HighToLow">High to low</option>
+                        </select>
+                    </div>
+                </header>
+            </section>
+            <!--		first section end		-->
+
+            <!--		second section start-->
+            <div class="container product-field py-2 cardleft">
+                <ul class="items">
+                    <li data-category="" data-price="">
+                        <picture>
+                            <img src="image/education-2.jpg" alt="">
+                        </picture>
+                        <div class="detail">
+                            <p class="icon">
+                                <span><i class="far fa-heart"></i></span>
+                                <span><i class="far fa-share-square"></i></span>
+                                <span><i class="fas fa-shopping-basket"></i></span>
+                            </p>
+                            <strong>Romance</strong>
+                            <span>-- Books Name ---</span>
+                            <span>-- About Books ---</span>
+                            <small>Buy now</small>
+                        </div>
+                        <h4>4200ks</h4>
+                    </li>
+                    <li data-category="" data-price="">
+                        <picture>
+                            <img src="image/computer-2.jpg" alt="">
+                        </picture>
+                        <div class="detail">
+                            <p class="icon">
+                                <span><i class="far fa-heart"></i></span>
+                                <span><i class="far fa-share-square"></i></span>
+                                <span><i class="fas fa-shopping-basket"></i></span>
+                            </p>
+                            <strong>Science</strong>
+                            <span>-- Books Name ---</span>
+                            <span>-- About Books ---</span>
+                            <small>Buy now</small>
+                        </div>
+                        <h4>3400ks</h4>
+                    </li>
+                    <li data-category="" data-price="">
+                        <picture>
+                            <img src="image/computer-3.jpg" alt="">
+                        </picture>
+                        <div class="detail">
+                            <p class="icon">
+                                <span><i class="far fa-heart"></i></span>
+                                <span><i class="far fa-share-square"></i></span>
+                                <span><i class="fas fa-shopping-basket"></i></span>
+                            </p>
+                            <strong>Romance</strong>
+                            <span>-- Books Name ---</span>
+                            <span>-- About Books ---</span>
+                            <small>Buy now</small>
+                        </div>
+                        <h4>7500ks</h4>
+                    </li>
+                    <!--				-->
+                    <!--				-->
+                    <li data-category="" data-price="">
+                        <picture>
+                            <img src="image/education-1.jpg" alt="">
+                        </picture>
+                        <div class="detail">
+                            <p class="icon">
+                                <span><i class="far fa-heart"></i></span>
+                                <span><i class="far fa-share-square"></i></span>
+                                <span><i class="fas fa-shopping-basket"></i></span>
+                            </p>
+                            <strong>Science</strong>
+                            <span>-- Books Name ---</span>
+                            <span>-- About Books ---</span>
+                            <small>Buy now</small>
+                        </div>
+                        <h4>5000ks</h4>
+                    </li>
+                    <li data-category="" data-price="">
+                        <picture>
+                            <img src="image/computer-1.jpg" alt="">
+                        </picture>
+                        <div class="detail">
+                            <p class="icon">
+                                <span><i class="far fa-heart"></i></span>
+                                <span><i class="far fa-share-square"></i></span>
+                                <span><i class="fas fa-shopping-basket"></i></span>
+                            </p>
+                            <strong>Romance</strong>
+                            <span>-- Books Name ---</span>
+                            <span>-- About Books ---</span>
+                            <small>Buy now</small>
+                        </div>
+                        <h4>5200ks</h4>
+                    </li>
+                    <li data-category="" data-price="">
+                        <picture>
+                            <img src="image/horror.jpg" alt="">
+                        </picture>
+                        <div class="detail">
+                            <p class="icon">
+                                <span><i class="far fa-heart"></i></span>
+                                <span><i class="far fa-share-square"></i></span>
+                                <span><i class="fas fa-shopping-basket"></i></span>
+                            </p>
+                            <strong>Science</strong>
+                            <span>-- Books Name ---</span>
+                            <span>-- About Books ---</span>
+                            <small>Buy now</small>
+                        </div>
+                        <h4>8000ks</h4>
+                    </li>
+                    <li data-category="" data-price="">
+                        <picture>
+                            <img src="image/romance-1.jpg" alt="">
+                        </picture>
+                        <div class="detail">
+                            <p class="icon">
+                                <span><i class="far fa-heart"></i></span>
+                                <span><i class="far fa-share-square"></i></span>
+                                <span><i class="fas fa-shopping-basket"></i></span>
+                            </p>
+                            <strong>History</strong>
+                            <span>-- Books Name ---</span>
+                            <span>-- About Books ---</span>
+                            <small>Buy now</small>
+                        </div>
+                        <h4>3100ks</h4>
+                    </li>
+                    <li data-category="" data-price="">
+                        <picture>
+                            <img src="image/romance-2.jpg" alt="">
+                        </picture>
+                        <div class="detail">
+                            <p class="icon">
+                                <span><i class="far fa-heart"></i></span>
+                                <span><i class="far fa-share-square"></i></span>
+                                <span><i class="fas fa-shopping-basket"></i></span>
+                            </p>
+                            <strong>Technology</strong>
+                            <span>-- Books Name ---</span>
+                            <span>-- About Books ---</span>
+                            <small>Buy now</small>
+                        </div>
+                        <h4>2000ks</h4>
+                    </li>
+                    <li data-category="" data-price="">
+                        <picture>
+                            <img src="image/romance-3.jpg" alt="">
+                        </picture>
+                        <div class="detail">
+                            <p class="icon">
+                                <span><i class="far fa-heart"></i></span>
+                                <span><i class="far fa-share-square"></i></span>
+                                <span><i class="fas fa-shopping-basket"></i></span>
+                            </p>
+                            <strong>History</strong>
+                            <span>-- Books Name ---</span>
+                            <span>-- About Books ---</span>
+                            <small>Buy now</small>
+                        </div>
+                        <h4>10000ks</h4>
+                    </li>
+                    <li data-category="" data-price="">
+                        <picture>
+                            <img src="image/education-3.jpg" alt="">
+                        </picture>
+                        <div class="detail">
+                            <p class="icon">
+                                <span><i class="far fa-heart"></i></span>
+                                <span><i class="far fa-share-square"></i></span>
+                                <span><i class="fas fa-shopping-basket"></i></span>
+                            </p>
+                            <strong>History</strong>
+                            <span>-- Books Name ---</span>
+                            <span>-- About Books ---</span>
+                            <small>Buy now</small>
+                        </div>
+                        <h4>1500ks</h4>
+                    </li>
+                    <li data-category="" data-price="">
+                        <picture>
+                            <img src="image/science-2.jpg" alt="">
+                        </picture>
+                        <div class="detail">
+                            <p class="icon">
+                                <span><i class="far fa-heart"></i></span>
+                                <span><i class="far fa-share-square"></i></span>
+                                <span><i class="fas fa-shopping-basket"></i></span>
+                            </p>
+                            <strong>Technology</strong>
+                            <span>-- Books Name ---</span>
+                            <span>-- About Books ---</span>
+                            <small>Buy now</small>
+                        </div>
+                        <h4>2500ks</h4>
+                    </li>
+                    <li data-category="" data-price="">
+                        <picture>
+                            <img src="image/science-3.jpg" alt="">
+                        </picture>
+                        <div class="detail">
+                            <p class="icon">
+                                <span><i class="far fa-heart"></i></span>
+                                <span><i class="far fa-share-square"></i></span>
+                                <span><i class="fas fa-shopping-basket"></i></span>
+                            </p>
+                            <strong>Education</strong>
+                            <span>-- Books Name ---</span>
+                            <span>-- About Books ---</span>
+                            <small>Buy now</small>
+                        </div>
+                        <h4>9400ks</h4>
+                    </li>
+                </ul>
+            </div>
+
+            <!--		second section end		-->
+        </main>
+        <!---------------       --------------------->
+    </div>
+
+<!--    @yield('header_footer')-->
+
+    <div class="container text-center">
+        <span class="text-muted" style="font-family: 'Bauhaus 93'">dev_phyoewai &copy;  <hr></span>
+    </div>
+
+    <footer class="footer bg-info-subtle mt-auto py-4 ">
+        <div class="container text-center">
+            <span class="text-muted">&copy; 2023 Bookshop.com. All Rights Reserved.</span>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script>
+        window.sr = ScrollReveal();
+        sr.reveal('.navsection',{
+            origin:'top',
+            distance: '50px',
+            duration:800,
+        });
+        sr.reveal('.secnav',{
+            origin: 'left',
+            distance: '50px',
+            duration: 800,
+            delay : 800,
+        });
+        sr.reveal('.cardleft',{
+            origin: 'right',
+            distance: '200px',
+            duration: 1000,
+            delay : 1200,
+        });
+    </script>
+
+</body>
+<!--@yield('script')-->
+</html>
+<script type="text/javascript" src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
